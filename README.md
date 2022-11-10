@@ -1,24 +1,17 @@
-# README
+Add in Gemfile : gem 'devise'
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+bundle install
+rails generate devise:install
 
-Things you may want to cover:
+<--
+rails g devise:views
+rails g devise user
+rails db:migrate
 
-* Ruby version
+bin/rails generate model Post body:text user:references
+bin/rails generate controller Posts index --skip-routes
+-->
 
-* System dependencies
+rails db:migrate
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails sever
